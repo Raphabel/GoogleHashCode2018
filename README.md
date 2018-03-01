@@ -1,0 +1,1 @@
+# StechTeam-hashcode2018
