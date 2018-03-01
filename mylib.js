@@ -27,12 +27,31 @@ Mylib.waiting = function (carLast, target, minStart) {
  * [canFinish description]
  */
 Mylib.rideFinish = function (carLast, startTarget, endTarget, maxEnd) {
+	var time = Mylib.timeReady(carLast, startTarget) + Mylib.distance(startTarget, endTarget);
 	return {
-		time: Mylib.timeReady(carLast, target) + Mylib.distance(startTarget, endTarget),
-		possible: this.time <= maxEnd
+		time: time,
+		possible: time <= maxEnd
 	};
 };
 
+
+Mylib.getInfos = function (ride, car) {
+	return {
+		timeReady: Mylib.timeReady(car.last, ride.pos.start),
+		waiting: Mylib.waiting(car.last, ride.pos.start, ride.startTime),
+		rideFinish: Mylib.rideFinish(car.last, ride.pos.start, ride.pos.end, ride.maxTime),
+	}
+};
+
+Mylib.getScore = function (ride, car) {
+	var score = 0;
+	var infos = Mylib.getInfos(ride, car);
+	score = infos.timeReady + infos.waiting;
+	return {
+		score: score,
+		canFinish: infos.rideFinish.possible,
+	}
+};
 
 // rides = {
 // 	0: {
