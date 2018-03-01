@@ -7,18 +7,18 @@
     "start": "node ./index",
     "test": "echo \"Error: no test specified\" && exit 1",
     "all": "npm run input1 input2 input3 input4 input5",
-    "input1": "npm start a-example.in",
-    "input2": "npm start b-should-be-easy.in",
-    "input3": "npm start c-no-hurry.in",
-    "input4": "npm start d-metropolis.in",
-    "input5": "npm start e-high-bonus.in"
+    "input1": "npm start a_example.in",
+    "input2": "npm start b_should_be_easy.in",
+    "input3": "npm start c_no_hurry.in",
+    "input4": "npm start d_metropolis.in",
+    "input5": "npm start e_high_bonus.in"
   },
   "files": {
-    "input1": "a-example",
-    "input2": "b-should-be-easy",
-    "input3": "c-no-hurry",
-    "input4": "d-metropolis",
-    "input5": "e-high-bonus"
+    "input1": "a_example",
+    "input2": "b_should_be_easy",
+    "input3": "c_no_hurry",
+    "input4": "d_metropolis",
+    "input5": "e_high_bonus"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/Raphabel/testdelamort/issues"
   },
-  "homepage": "https://github.com/Raphabel/testdelamort#readme"
+  "homepage": "https://github.com/Raphabel/testdelamort#readme",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
 }
