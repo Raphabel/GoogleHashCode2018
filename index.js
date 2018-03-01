@@ -6,8 +6,8 @@ const filename = process.argv[2];
 
 var problem = Read.processFile(filename);
 
-Algo.init(problem);
-var cars = {
+var cars = Algo.init(problem);
+/**var cars = {
     0: {
         rides: [42, 10],
         last: {x: 2, y: 2, time: 142},
@@ -41,5 +41,5 @@ var cars = {
         last: {x: 2, y: 2, time: 142},
     }
 }
-
+*/
 Write.displaySolution(filename, cars);
