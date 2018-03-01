@@ -2,4 +2,6 @@ var Read     = require('./read');
 
 const filename = process.argv[2];
 
-Read.processFile(filename);
+var problem = Read.processFile(filename);
+
+console.log(problem.rides);

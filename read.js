@@ -21,9 +21,7 @@ Read.processFile = function (filename) {
             Problem.addRide(array[0], array[1], array[2], array[3], array[4], array[5], index);
         }
     });
-
-    console.log(Problem.cars);
-    console.log(Problem.rides);
+    return Problem;
 }
 
 module.exports = Read;
