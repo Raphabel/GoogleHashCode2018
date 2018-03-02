@@ -10,6 +10,7 @@ Write.displaySolution = function (filename, cars) {
     var stream = fs.createWriteStream(path);
     stream.once('open', function (fd) {
         _.each(cars, function (car) {
+            stream.write(car.rides.length + " ");
             _.each(car.rides, function (ride, index) {
                 stream.write(ride.toString());
                 if (index <  (car.rides.length - 1)) {
